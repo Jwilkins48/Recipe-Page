@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import Axios from "axios";
 import MealList from "./components/MealList";
 
 
@@ -12,8 +12,8 @@ function App() {
 
   useEffect(() => {
     async function fetchData(){
-      const request = await fetch(`https://api.edamam.com/api/recipes/v2`)
-      const data = await Response.json()
+      const res = await Axios.get(`"https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=3&calories=591-722&health=alcohol-free"` )
+      const data = await res.json();
 
     }
     fetchData()
