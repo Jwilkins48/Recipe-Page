@@ -6,6 +6,8 @@ function App() {
   const [search, setSearch] = useState('');
   const [recipes, setRecipes] = useState([])
 
+  //https://api.edamam.com/search?q=chicken&app_id=1f947df2&app_key=bf2f0ead683c3918124966e995be981c&from=0&to=3&calories=591-722&health=alcohol-free
+
   const API_KEY = 'bf2f0ead683c3918124966e995be981c';
   const APP_ID = '1f947df2'
 
@@ -17,7 +19,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchData();
+    fetchData()
   }
   
   return (

@@ -3,8 +3,8 @@ import React from 'react'
 function Card({recipe}) {
   return (
     <div className='card'>
-        <p>{recipe['recipe']['label']}</p>
-      
+      <img className='cardImages' alt='recipe images' src={recipe['recipe']['image']} />
+      <p className='recipeInfo'>{recipe['recipe']['label']}</p>
     </div>
   )
 }
