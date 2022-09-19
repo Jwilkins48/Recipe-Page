@@ -8,11 +8,14 @@
 body {
   background-color: #f3f5ee;
 }
+.btn{
+  cursor: pointer;
+}
 /* HEADER */
 .navContainer{
   margin-bottom: 20px;
-  background-color: #3D8361;
-  height: 48px;
+  background-color: #78a77b;
+  height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +33,6 @@ body {
 
 .submitSearchBtn{
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  cursor: pointer;
   font-size: 13px;
   padding: 4px 9px;
   border: 1px solid #1C6758;
@@ -48,19 +50,60 @@ body {
   align-items: center;
 }
 .card{
-  width: 310px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 350px;
   height: 350px;
   margin-bottom: 15px;
   border-radius: 6px;
-  background-color: #fce4b5;
+  background-color: #ffe4ae;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  position: relative;
+}
+.ingredients{
+  cursor: default;
+  min-height: 260px;
+  padding: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffe4ae;
+  height: fit-content;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear; 
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.ingredientsContainer:hover div{
+  visibility: visible;
+  opacity: .9;
 }
 .cardImages{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: auto;
-  width: 270px;
+  width: 275px;
   margin-top: 15px;
   border-radius: 6px;
+}
+.cardInfoContainer{
+  cursor: default;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+}
+.fullRecipeBtn{
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #ecb141;
+  background-color: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+}
+.fullRecipeBtn:hover{
+  background-color: #ffd788;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

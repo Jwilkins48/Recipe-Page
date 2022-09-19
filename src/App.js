@@ -2,6 +2,8 @@ import { useState } from "react";
 import Axios from "axios";
 import {v4 as uuidv4} from 'uuid'
 import Card from './components/Card'
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
   const [search, setSearch] = useState('');
@@ -27,20 +29,16 @@ function App() {
   return (
     <div className="App">
 
-      <nav className="navContainer">
-        {/* Search  */}
-        <form className="searchForm" onSubmit={handleSubmit}>
-          <input className="searchInput" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Enter Recipe" type='text'/>
-          <input className="submitSearchBtn btn" type='submit' value='Search'/>
-        </form>
-      </nav>
+      <BrowserRouter>
+        <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
 
-      {/* Display searched recipes */}
-      <div className="cardContainer">
-        {recipes.map((recipe) => {
+        {/* Display searched recipes */}
+        <div className="cardContainer">
+          {recipes.map((recipe) => {
           return <Card key={uuidv4()} recipe={recipe}/>
-        })}
-      </div>
+          })}
+        </div>
+      </BrowserRouter>
 
     </div>
   );
