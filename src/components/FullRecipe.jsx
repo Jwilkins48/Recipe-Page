@@ -1,9 +1,15 @@
 import React from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function FullRecipe() {
+function FullRecipe({recipes}) {
+
+    const [activeRecipe, setActiveRecipe] = useState([])
+
   return (
     <div>
-      hi
+        recipe<br/>
+        <Link to='/'>Home</Link>
     </div>
   )
 }

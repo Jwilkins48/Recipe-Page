@@ -96,6 +96,8 @@ body {
   justify-content: space-around;
 }
 .fullRecipeBtn{
+  font-size: .9rem;
+  text-decoration: none;
   padding: 4px;
   border-radius: 6px;
   border: 1px solid #ecb141;

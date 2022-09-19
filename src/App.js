@@ -33,7 +33,7 @@ function App() {
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home recipes={recipes}/>}></Route>
-          <Route path="/recipe" element={<FullRecipe />}></Route>
+          <Route path="/recipe/:id" element={<FullRecipe recipes={recipes}/>}></Route>
         </Routes>
       </BrowserRouter>
 
