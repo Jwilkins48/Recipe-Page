@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Axios from "axios";
-import {v4 as uuidv4} from 'uuid'
-import Card from './components/Card'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
+import Home from "./components/Home";
+import FullRecipe from "./components/FullRecipe";
 
 function App() {
   const [search, setSearch] = useState('');
@@ -31,13 +31,10 @@ function App() {
 
       <BrowserRouter>
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
-
-        {/* Display searched recipes */}
-        <div className="cardContainer">
-          {recipes.map((recipe) => {
-          return <Card key={uuidv4()} recipe={recipe}/>
-          })}
-        </div>
+        <Routes>
+          <Route path="/" element={<Home recipes={recipes}/>}></Route>
+          <Route path="/recipe" element={<FullRecipe />}></Route>
+        </Routes>
       </BrowserRouter>
 
     </div>
