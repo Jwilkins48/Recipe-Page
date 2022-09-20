@@ -51,20 +51,20 @@ body {
 }
 .card{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 350px;
-  height: 350px;
-  margin-bottom: 15px;
+  width: 330px;
+  height: auto;
+  margin-bottom: 20px;
   border-radius: 6px;
   background-color: #ffe4ae;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: relative;
+  padding: 10px;
 }
 .ingredients{
   cursor: default;
-  min-height: 260px;
+  min-height: 270px;
   padding: 1rem;
   text-align: center;
   position: absolute;
@@ -103,7 +103,11 @@ body {
   border: 1px solid #ecb141;
   background-color: #ffffff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  
+}
+.fullRecipeBtn a{
+  text-decoration: none;
+  color: #1C6758;
+  padding: 3px;
 }
 .fullRecipeBtn:hover{
   background-color: #ffd788;

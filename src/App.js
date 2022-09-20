@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Axios from "axios";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, useNavigate  } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import FullRecipe from "./components/FullRecipe";
@@ -8,6 +8,7 @@ import FullRecipe from "./components/FullRecipe";
 function App() {
   const [search, setSearch] = useState('');
   const [recipes, setRecipes] = useState([]);
+  const navigate = useNavigate();
 
   //https://api.edamam.com/search?q=chicken&app_id=1f947df2&app_key=bf2f0ead683c3918124966e995be981c&from=0&to=3&calories=591-722&health=alcohol-free
 
@@ -22,20 +23,21 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    navigate('/searched/' + search)
     fetchData()
   }
 
   
+
   return (
+    
     <div className="App">
 
-      <BrowserRouter>
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home recipes={recipes}/>}></Route>
-          <Route path="/recipe/:id" element={<FullRecipe recipes={recipes}/>}></Route>
+          <Route path="/recipe/:searched" element={<FullRecipe recipes={recipes}/>}></Route>
         </Routes>
-      </BrowserRouter>
 
     </div>
   );
