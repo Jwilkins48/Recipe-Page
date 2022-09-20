@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Axios from "axios";
 
-function FullRecipe({recipes}) {
+export default ({ match: { params: { id } } }) =>
+  <h1>
+    {id}
+  </h1>
 
-  return (
-    <div>
-        recipe<br/>
-        <Link to='/'>Home</Link>
-    </div>
-  )
-}
+// function FullRecipe({match: {params: { id } } }) {
 
-export default FullRecipe
+
+//   return (
+//     <div>
+//       {id}
+//         recipe<br/>
+//         <Link to='/'>Home</Link>
+//     </div>
+//   )
+// }
+
+// export default FullRecipe

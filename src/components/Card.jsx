@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Card({recipe}) {
+function Card({search, recipe}) {
+
+
   let calories = recipe.recipe.calories
   return (
     <div className='card'>
@@ -17,10 +19,9 @@ function Card({recipe}) {
         </div>
 
         {/* On-click route page to new */}
-        <button className='fullRecipeBtn btn'>
-          <Link to={{ pathname: `/recipe/${recipe.recipe.label}`,
-                      state: {recipe: recipe.recipe.label}
-              }}>See Full Recipe
+        <button className='fullRecipeBtn btn'> 
+          <Link to={`/recipe/${recipe.recipe.label}`}>
+            See Full Recipe
           </Link>
         </button>
 
