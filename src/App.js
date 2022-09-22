@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Axios from "axios";
-import { Routes, Route, useNavigate  } from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import FullRecipe from "./components/FullRecipe";
@@ -25,18 +25,13 @@ function App() {
     fetchData()
   }
 
-  
-
   return (
-    
     <div className="App">
-
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home search={search} recipes={recipes}/>}></Route>
-          <Route exact path='/recipe/:id' element={<FullRecipe search={search} recipes={recipes}/>}></Route>
+          <Route path='/recipe/:name' element={<FullRecipe setRecipes={setRecipes} search={search} recipes={recipes}/>}></Route>
         </Routes>
-
     </div>
   );
 }
