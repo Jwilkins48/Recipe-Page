@@ -6,6 +6,7 @@ function FullRecipe({}) {
   const location = useLocation();
   const data = location.state?.data;
 
+  let calories = data.recipe.calories
   console.log(data);
   console.log(params);
 
@@ -14,8 +15,8 @@ function FullRecipe({}) {
         {data && (
         <div>
           <h3>{params.name}</h3>
-          <p>From: {data.recipe.ingredientLines}</p>
-          <p>From: {data.recipe.calories}</p>
+          <p>Recipe: {data.recipe.ingredientLines}</p>
+          <p>{calories.toFixed()} Calories</p>
           <img alt='recipe' src={data.recipe.image} />
         </div>
       )}

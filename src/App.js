@@ -30,7 +30,7 @@ function App() {
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home search={search} recipes={recipes}/>}></Route>
-          <Route path='/recipe/:name' element={<FullRecipe setRecipes={setRecipes} search={search} recipes={recipes}/>}></Route>
+          <Route path='/recipe/:name' element={<FullRecipe />}></Route>
         </Routes>
     </div>
   );

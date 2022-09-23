@@ -8,6 +8,11 @@ function Header({search, setSearch, handleSubmit}) {
           <input className="searchInput" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Enter Recipe" type='text'/>
           <input className="submitSearchBtn btn" type='submit' value='Search'/>
         </form>
+
+        <div className='headerRight'>
+        <i class="fa-solid fa-seedling logo"></i>
+          </div>
+
       </nav>
   )
 }
