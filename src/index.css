@@ -7,6 +7,7 @@
 }
 body {
   background-color: #f3f5ee;
+  overflow-x: hidden;
 }
 .btn{
   cursor: pointer;
@@ -64,6 +65,7 @@ body {
   border-radius: 6px;
   background-color: #ffe4ae;
   display: flex;
+  flex-direction: column;
   align-items: center;
   position: relative;
   padding: 10px;
@@ -105,13 +107,13 @@ body {
   margin-left: 30px;
 }
 .fullRecipeBtn{
-
+  margin: 10px 0;
   z-index: 1;
-  width: 150px;
+  width: 9rem;
   margin-right: 30px;
   font-size: .9rem;
   text-decoration: none;
-  padding: 4px;
+  padding: 5px;
   border-radius: 6px;
   border: 1px solid #ecb141;
   background-color: #ffffff;
@@ -127,19 +129,16 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.cardInfo{
-  margin-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
 /* TABLET SIZING */
 @media(min-width: 700px){
   .cardContainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-left: 18px;
+  }
+  .cardInfoContainer{
+    align-items: flex-start;
+    margin-left: 3.5rem;
   }
   .navContainer{
     display: flex;
@@ -168,15 +167,16 @@ body {
     font-size: 18px;
   }
   .card{
-    height: 390px;
+    height: auto;
   }
 }
 
 /* DESKTOP SIZING */
-@media(min-width: 1200px){
+@media(min-width: 1280px){
   .cardContainer{
     display: grid;
-    grid-template-columns: repeat(3, 40rem);
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
   }
   .searchInput{
     font-size: 18px;
@@ -184,11 +184,16 @@ body {
     margin-left: 35px;
   }
   .card{
-    width: 85%;
+    width: 90%;
     height: auto;
-    margin-left: 5rem;
+    margin: 10px auto;
+    flex-direction: row;
   }
   .cardInfo{
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
     font-size: 15px;
   }
   .cardImages{
