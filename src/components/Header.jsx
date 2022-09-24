@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function Header({search, setSearch, handleSubmit}) {
   return (
@@ -10,7 +12,7 @@ function Header({search, setSearch, handleSubmit}) {
         </form>
 
         <div className='headerRight'>
-        <i class="fa-solid fa-seedling logo"></i>
+        <Link to='/'><i class="fa-solid fa-seedling logo"></i></Link> 
           </div>
 
       </nav>
