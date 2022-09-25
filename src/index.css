@@ -9,13 +9,19 @@ body {
   background-color: #f3f5ee;
   overflow-x: hidden;
 }
+#homeScreen{
+  background-image: url(/src/components/Images/breakfast.jpg);
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .btn{
   cursor: pointer;
 }
 /* HEADER */
 .navContainer{
-  margin-bottom: 20px;
-  background-color: #78a77b;
+  background-color: #789fa7;
   height: 3.5rem;
   display: flex;
   align-items: center;
@@ -32,27 +38,30 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.submitSearchBtn{
+.searchLink{
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  font-size: 13px;
+  font-size: 1.1rem;
+  color: #134418;
   padding: 6px 9px;
   border: 1px solid #1C6758;
   background-color: #f1cb7d;
   border-radius: 4px;
+  text-decoration: none;
 }
-.submitSearchBtn:hover{
+.searchLink:hover{
   background-color: #fcd891;
 }
 
 .logo{
   font-size: 30px;
   margin-right: 10px;
-  color: #134418;
+  color: #134434;
 }
 
 
 /* RECIPE DISPLAY */
 .cardContainer{
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +116,6 @@ body {
   margin-left: 30px;
 }
 .fullRecipeBtn{
-  margin: 10px 0;
   z-index: 1;
   width: 9rem;
   margin-right: 30px;
@@ -173,9 +181,12 @@ body {
 
 /* DESKTOP SIZING */
 @media(min-width: 1280px){
+  .fullRecipeBtn{
+    margin-left: 15%;
+  }
   .cardContainer{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }
   .searchInput{
@@ -184,12 +195,14 @@ body {
     margin-left: 35px;
   }
   .card{
-    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 85%;
     height: auto;
     margin: 10px auto;
-    flex-direction: row;
   }
   .cardInfo{
+    width: 100%;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;

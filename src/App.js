@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Axios from "axios";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, useNavigate} from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import FullRecipe from "./components/FullRecipe";
+import Home from "./components/Pages/Home";
+import FullRecipe from "./components/Pages/FullRecipe";
+import Searched from "./components/Pages/Searched";
 
 function App() {
   const [search, setSearch] = useState('');
@@ -14,15 +15,20 @@ function App() {
   const API_KEY = 'bf2f0ead683c3918124966e995be981c';
   const APP_ID = '1f947df2'
 
+  const navigate = useNavigate();
+
   async function fetchData(){
     let res = await Axios.get(`https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${API_KEY}`)
     setRecipes(res.data.hits)
     console.log(res.data.hits);
   }
 
+  //Fetch API / navigate to searched path on recipe search
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetchData()
+    fetchData();
+    navigate('/searched')
+    setSearch('')
   }
 
   return (
@@ -30,6 +36,7 @@ function App() {
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home search={search} recipes={recipes}/>}></Route>
+          <Route path="/searched" element={<Searched search={search} recipes={recipes}/>}></Route>
           <Route path='/recipe/:name' element={<FullRecipe />}></Route>
         </Routes>
     </div>

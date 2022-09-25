@@ -1,8 +1,8 @@
 import React from 'react'
-import Card from './Card'
+import Card from '../Card'
 import {v4 as uuidv4} from 'uuid'
 
-function Home({search, recipes}) {
+function Searched({search, recipes}) {
   return (
     <div className="cardContainer">
         {recipes.map((recipe) => {
@@ -12,4 +12,4 @@ function Home({search, recipes}) {
   )
 }
 
-export default Home
+export default Searched

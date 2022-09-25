@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
+import {Link} from 'react-router-dom';
 
 function Header({search, setSearch, handleSubmit}) {
+
   return (
     <nav className="navContainer">
         {/* Search  */}
-        <form className="searchForm" onSubmit={handleSubmit}>
+        <form className="searchForm" type='submit' onSubmit={handleSubmit}>
           <input className="searchInput" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Enter Recipe" type='text'/>
-          <input className="submitSearchBtn btn" type='submit' value='Search'/>
+          <input className="searchLink btn" type='submit' value='Search'/>
         </form>
 
         <div className='headerRight'>
