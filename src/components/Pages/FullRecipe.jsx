@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useParams, useLocation  } from 'react-router-dom'
 
-function FullRecipe({}) {
+function FullRecipe() {
   const params = useParams();
   const location = useLocation();
   const data = location.state?.data;
@@ -14,10 +14,14 @@ function FullRecipe({}) {
     <div>
         {data && (
         <div>
-          <h3>{params.name}</h3>
-          <p>Recipe: {data.recipe.ingredientLines}</p>
-          <p>{calories.toFixed()} Calories</p>
+          <h3 className='recipe-name'>{params.name}</h3>
           <img alt='recipe' src={data.recipe.image} />
+          <ul>
+            {data.recipe.ingredients.map(ingredient => (
+              <li className='ingredientList'>{ingredient.text}</li>
+            ))}
+          </ul>
+          <p>{calories.toFixed()} Calories</p>
         </div>
       )}
 

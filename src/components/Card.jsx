@@ -9,7 +9,15 @@ function Card({recipe}) {
       {/* IMAGE / RECIPE INFO */}
       <div className='ingredientsContainer'>
         <img className='cardImages' alt='recipe images' src={recipe.recipe.image} />
-        <div className='ingredients'>{recipe.recipe.ingredientLines}</div>
+        <div className='ingredients'>
+          <ul>
+            {recipe.recipe.ingredients.map(ingredient => (
+              <li className='ingredientList'>{ingredient.text}</li>
+            ))}
+          </ul>
+        </div>
+
+
       </div>
 
       {/* NAME / MORE INFO */}

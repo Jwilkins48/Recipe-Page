@@ -80,10 +80,11 @@ body {
   padding: 10px;
 }
 .ingredients{
+  list-style-type: none;
   cursor: default;
   padding: 1rem;
-  text-align: center;
   position: absolute;
+  left: 0;
   top: 0;
   right: 0;
   background-color: #ffe4ae;
@@ -98,6 +99,10 @@ body {
   height: 90%;
   visibility: visible;
   opacity: .9;
+}
+.ingredientList{
+  list-style-type: none;
+  font-size: 14px;
 }
 .cardImages{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
