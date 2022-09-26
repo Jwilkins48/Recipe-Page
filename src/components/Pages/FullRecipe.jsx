@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link, useParams, useLocation  } from 'react-router-dom'
+import {v4 as uuidv4} from 'uuid'
+import '../css/fullRecipe.css'
+
 
 function FullRecipe() {
   const params = useParams();
@@ -11,21 +14,31 @@ function FullRecipe() {
   console.log(params);
 
   return (
-    <div>
+    <div className='full-container'>
         {data && (
-        <div>
-          <h3 className='recipe-name'>{params.name}</h3>
-          <img alt='recipe' src={data.recipe.image} />
-          <ul>
-            {data.recipe.ingredients.map(ingredient => (
-              <li className='ingredientList'>{ingredient.text}</li>
-            ))}
-          </ul>
-          <p>{calories.toFixed()} Calories</p>
+        <div className='inner-container'>
+          <div className="left-side">
+            <h1 className='recipe-name'>{params.name}</h1>
+            <img className='recipe-img' alt='recipe' src={data.recipe.image} />
+            <p>{calories.toFixed()} Calories</p>
+            <p >{data.recipe.yield} Servings</p>
+          </div>
+
+
+          <hr className='hr' />
+          <div className="right-side">
+            <div className="recipe-container">
+              <ul className='list-container'>
+                {data.recipe.ingredients.map(ingredient => (
+                  <li key={uuidv4()} className='ingredientList'>{ingredient.text}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       )}
 
-        <Link to='/'>Home</Link>
+        <Link className='home-link' to='/'>Return Home</Link>
     </div>
   )
 }
