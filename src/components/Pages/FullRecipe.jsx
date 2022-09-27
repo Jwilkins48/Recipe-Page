@@ -30,7 +30,7 @@ function FullRecipe() {
             <div className="recipe-container">
               <ul className='list-container'>
                 {data.recipe.ingredients.map(ingredient => (
-                  <li key={uuidv4()} className='ingredientList'>{ingredient.text}</li>
+                  <li key={uuidv4()} className='ingredient-list'>{ingredient.text}</li>
                 ))}
               </ul>
             </div>
