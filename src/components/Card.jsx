@@ -16,8 +16,6 @@ function Card({recipe}) {
             ))}
           </ul>
         </div>
-
-
       </div>
 
       {/* NAME / MORE INFO */}
@@ -36,7 +34,6 @@ function Card({recipe}) {
         </button>
 
       </div>
-
 
     </div> 
   )

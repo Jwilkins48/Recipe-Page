@@ -15,7 +15,6 @@ function App() {
 
   const API_KEY = 'bf2f0ead683c3918124966e995be981c';
   const APP_ID = '1f947df2'
-
   const navigate = useNavigate();
 
   async function fetchData(){
@@ -28,7 +27,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     fetchData();
-    navigate('/searched')
+    navigate('/searched/' + search)
     setSearch('')
   }
 
@@ -37,7 +36,7 @@ function App() {
         <Header handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
         <Routes>
           <Route path="/" element={<Home search={search} recipes={recipes}/>}></Route>
-          <Route path="/searched" element={<Searched search={search} recipes={recipes}/>}></Route>
+          <Route path="/searched/:search" element={<Searched search={search} recipes={recipes}/>}></Route>
           <Route path='/cuisine/:type' element={<Cuisine />}></Route>
           <Route path='/recipe/:name' element={<FullRecipe />}></Route>
         </Routes>

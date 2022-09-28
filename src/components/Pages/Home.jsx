@@ -34,7 +34,7 @@ function Home({search}) {
 
         <div className="home-recipe-display">
           {randomRecipe.map((random) => {
-            return <div className='home-card'><HomeCard search={search} key={uuidv4()} random={random}/></div>
+            return <div key={uuidv4()}className='home-card'><HomeCard search={search} random={random}/></div>
           })}
         </div>
       </div>

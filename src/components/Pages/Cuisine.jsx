@@ -11,6 +11,7 @@ function Cuisine() {
     const API_KEY = 'bf2f0ead683c3918124966e995be981c';
     const APP_ID = '1f947df2'
 
+    // https://api.edamam.com/api/recipes/v2?type=public&app_id=${APP_ID}&app_key=${API_KEY}&from=0&to=3&cuisineType=${name}
     const getCuisine = async (name) => {
         let res = await Axios.get(`https://api.edamam.com/api/recipes/v2?type=public&app_id=${APP_ID}&app_key=${API_KEY}&cuisineType=${name}`)
         setCuisine(res.data.hits);
