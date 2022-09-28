@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Pages/Home";
 import FullRecipe from "./components/Pages/FullRecipe";
 import Searched from "./components/Pages/Searched";
+import Cuisine from "./components/Pages/Cuisine";
 
 function App() {
   const [search, setSearch] = useState('');
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home search={search} recipes={recipes}/>}></Route>
           <Route path="/searched" element={<Searched search={search} recipes={recipes}/>}></Route>
+          <Route path='/cuisine/:type' element={<Cuisine />}></Route>
           <Route path='/recipe/:name' element={<FullRecipe />}></Route>
         </Routes>
     </div>

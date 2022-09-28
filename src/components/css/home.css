@@ -48,4 +48,19 @@
     .random-recipe-img{
         width: 10rem;
     }
+
+    /* CATEGORY SECTION */
+    .category-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .cuisineType-container{
+        border: 1px solid;
+        padding: 15px;
+        background-color: #267566;
+        border-radius: 50%;
+        text-align: center;
+    }
 }
