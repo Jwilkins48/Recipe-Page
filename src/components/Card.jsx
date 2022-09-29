@@ -22,7 +22,7 @@ function Card({recipe, theme}) {
       <div style={theme.cardInfoContainer}>
 
         <div className='cardInfo'>
-          <h3>{recipe.recipe.label}</h3>
+          <h3 style={theme.search} className='recipeInfo'>{recipe.recipe.label}</h3>
           <p className='recipeInfo'>{calories.toFixed()} cal</p>
           <p className='recipeInfo'>{recipe.recipe.mealType}</p>
           <p className='recipeInfo'>{recipe.recipe.yield} Servings</p>

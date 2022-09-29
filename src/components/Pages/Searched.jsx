@@ -21,10 +21,31 @@ function Searched() {
     getSearch(params.search)
   }, [params.search]);
 
+
+  // CARD STYLING
+  const searchTheme = {
+    main: {
+      backgroundColor: '#ffe4ae',
+      width: '75%',
+      margin: '15px auto',
+      padding: '20px',
+      display: 'flex'
+    },
+    cardInfoContainer: {
+      justifyContent: 'space-around',
+      height: 'auto',
+      cursor: 'default',
+      margin: '0 15px',
+      display: 'flex',
+      flexDirection: 'column', 
+      alignItems: 'flex-start',
+    },
+  };
+
   return (
     <div className="cardContainer">
       {searched.map((recipe) => {
-        return <Card key={uuidv4()} recipe={recipe}/>
+        return <Card key={uuidv4()} theme={searchTheme} recipe={recipe}/>
       })}
     </div>
   )

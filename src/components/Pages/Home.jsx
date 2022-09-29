@@ -32,7 +32,9 @@ function Home({search}) {
       display: 'flex',
       alignItems: 'center',
       position: 'relative',
-      padding: '15px'
+      padding: '15px',
+      marginBottom: '15px',
+      boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
     },
     cardImage: {
       boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
@@ -49,8 +51,7 @@ function Home({search}) {
       display: 'flex',
       flexDirection: 'column', 
       alignItems: 'flex-start',
-
-    }
+    },
   };
 
   // const homeTheme = {

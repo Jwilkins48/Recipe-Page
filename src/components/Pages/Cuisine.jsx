@@ -25,27 +25,29 @@ function Cuisine() {
     }, [params.type]);
 
     const cuisineTheme = {
-      color: "green",
-      backgroundColor: "yellow",
-      padding: "20px",
-      fontFamily: "Arial"
+      main: {
+        backgroundColor: '#ffe4ae',
+        width: '80%',
+        margin: '15px auto',
+        padding: '20px',
+        display: 'flex'
+      },
+      cardInfoContainer: {
+        justifyContent: 'space-around',
+        height: 'auto',
+        cursor: 'default',
+        margin: '0 15px',
+        display: 'flex',
+        flexDirection: 'column', 
+        alignItems: 'flex-start',
+      },
     };
 
   return (
-    <div>
-      {/* {cuisine.map((item) => {
-        return ( */}
-
-          {cuisine.map((recipe) => {
-            return <Card theme={cuisineTheme} key={uuidv4()} recipe={recipe}/>
-          })}
-
-            {/* // <div key={uuidv4()}>
-            //     <img src={item.recipe.image} alt='cuisine' />
-            //     <h3>{item.recipe.label}</h3>
-            // </div> */}
-        {/* ) 
-      })} */}
+    <div className='cuisine-container'>
+      {cuisine.map((recipe) => {
+        return <Card theme={cuisineTheme} key={uuidv4()} recipe={recipe}/>
+      })}
     </div>
   )
 }
