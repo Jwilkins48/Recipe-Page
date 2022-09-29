@@ -8,23 +8,23 @@ function Category() {
     <div className='category-container'>
 
         <NavLink to={'/cuisine/Mexican'} className="cuisineType-container">
-            <i class="fa-solid fa-pepper-hot"></i>
-            <h5>Mexican</h5>
+            <i class="fa-solid fa-pepper-hot category-icon"></i>
+            <p className='cuisine-title'>Mexican</p>
         </NavLink>
 
         <NavLink to={'/cuisine/Chinese'} className="cuisineType-container">
-            <i class="fa-solid fa-bowl-rice"></i>
-            <h5>Chinese</h5>
+            <i class="fa-solid fa-bowl-rice category-icon"></i>
+            <p className='cuisine-title'>Chinese</p>
         </NavLink>
 
-        <NavLink to={'/cuisine/Italian'} className="cuisineType-container">
-            <i class="fa-solid fa-pizza-slice"></i>
-            <h5>Italian</h5>
+        <NavLink to={'/cuisine/Italian'} className="cuisineType-container italian">
+            <i class="fa-solid fa-pizza-slice category-icon"></i>
+            <p className='cuisine-title'>Italian</p>
         </NavLink>
 
         <NavLink to={'/cuisine/American'} className="cuisineType-container">
-            <i class="fa-solid fa-burger"></i>
-            <h5>American</h5>
+            <i class="fa-solid fa-burger category-icon"></i>
+            <p className='cuisine-title'>American</p>
         </NavLink>
     </div>
   )

@@ -4,6 +4,8 @@ import '../css/home.css'
 import {v4 as uuidv4} from 'uuid'
 import HomeCard from '../HomeCard';
 import Category from '../Category';
+import { Link, useParams, useLocation  } from 'react-router-dom'
+
 
 function Home({search}) {
 
@@ -28,13 +30,10 @@ function Home({search}) {
         <Category />
         <hr className='home-hr' />
 
-        <div className="cuisine-type-container">
-
-        </div>
-
         <div className="home-recipe-display">
           {randomRecipe.map((random) => {
-            return <div key={uuidv4()}className='home-card'><HomeCard search={search} random={random}/></div>
+            //  <Link to={'/recipe/' + random.recipe.label} key={uuidv4()}>
+            return <div className='home-card'><HomeCard search={search} random={random}/></div>
           })}
         </div>
       </div>
