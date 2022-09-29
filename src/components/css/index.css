@@ -7,8 +7,6 @@
 }
 body {
   background-color: #f3f5ee;
-  /* overflow-y: hidden; */
-
 }
 #homeScreen{
   background-image: url(/src/components/Images/breakfast.jpg);
@@ -61,19 +59,18 @@ body {
 
 
 /* RECIPE DISPLAY */
-/* .cardContainer{
+.cardContainer{
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .card{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 330px;
   height: auto;
   margin-bottom: 20px;
   border-radius: 6px;
-  background-color: #ffe4ae;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,13 +102,13 @@ body {
   list-style-type: none;
   font-size: 14px;
 }
-.cardImages{
+/* .cardImages{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: auto;
   width: 275px;
   margin-top: 15px;
   border-radius: 6px;
-}
+} */
 .cardInfoContainer{
   cursor: default;
   display: flex;
@@ -141,7 +138,7 @@ body {
 .fullRecipeBtn:hover{
   background-color: #ffd788;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} */
+} 
 
 /* TABLET SIZING */
 @media(min-width: 700px){

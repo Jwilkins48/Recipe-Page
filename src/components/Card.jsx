@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 function Card({recipe, theme}) {
   let calories = recipe.recipe.calories
   return (
-    <div className='card'>
+    <div style={theme.main} className='card'>
 
       {/* IMAGE / RECIPE INFO */}
       <div className='ingredientsContainer'>
-        <img className='cardImages' alt='recipe images' src={recipe.recipe.image} />
+        <img style={theme.cardImage} alt='recipe images' src={recipe.recipe.image} />
         <div className='ingredients'>
           <ul>
             {recipe.recipe.ingredients.map(ingredient => (
@@ -22,7 +22,7 @@ function Card({recipe, theme}) {
       <div className='cardInfoContainer'>
 
         <div className='cardInfo'>
-          <h1 style={theme.main} >{recipe.recipe.label}</h1>
+          <h1>{recipe.recipe.label}</h1>
           <p className='recipeInfo'>{calories.toFixed()} cal</p>
           <p className='recipeInfo'>{recipe.recipe.mealType}</p>
           <p className='recipeInfo'>{recipe.recipe.yield} Servings</p>

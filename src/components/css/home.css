@@ -5,17 +5,18 @@
 }
 
 .home-message-container{
-    background-color: #eccea5;
+    background-color: #f1e8dc;
     opacity: .95;
-    width: 85%;
-    margin-top: 50px;
-    height: 30rem;
+    width: auto;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 25px;
 }
 
 .home-heading{
     color: #267566;
     text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 15px;
 }
 .home-hr{
     width: 75%;
@@ -31,22 +32,19 @@
 /* DESKTOP SIZING */
 @media(min-width: 1280px){
     .home-message-container{
-        width: 80%;
-        height: 80%;
+        width: 70%;
+        height: 82%;
+        padding: 2rem 5rem;
     }
-    /* .home-recipe-display{
+    .home-recipe-display{
         display: grid;
-        grid-template-columns: 2fr 1.5fr;
-        grid-template-rows: auto;
-    }
-    .home-card{
-        background-color: antiquewhite;
-        border-radius: 6px;
-        margin: 10px 20px;
+        grid-template-columns: 2fr 2fr;
+
+        gap: 0 2rem;
     }
     .random-recipe-img{
         width: 10rem;
-    } */
+    }
 
     /* CATEGORY SECTION */
     .category-container{
