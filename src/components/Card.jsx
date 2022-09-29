@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Card({recipe}) {
+function Card({recipe, theme}) {
   let calories = recipe.recipe.calories
   return (
     <div className='card'>
@@ -22,7 +22,7 @@ function Card({recipe}) {
       <div className='cardInfoContainer'>
 
         <div className='cardInfo'>
-          <h1 className='recipeInfo'>{recipe.recipe.label}</h1>
+          <h1 style={theme.main} >{recipe.recipe.label}</h1>
           <p className='recipeInfo'>{calories.toFixed()} cal</p>
           <p className='recipeInfo'>{recipe.recipe.mealType}</p>
           <p className='recipeInfo'>{recipe.recipe.yield} Servings</p>

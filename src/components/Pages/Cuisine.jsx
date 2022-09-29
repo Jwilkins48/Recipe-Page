@@ -24,13 +24,20 @@ function Cuisine() {
         console.log(params.type);
     }, [params.type]);
 
+    const cuisineTheme = {
+      color: "green",
+      backgroundColor: "yellow",
+      padding: "20px",
+      fontFamily: "Arial"
+    };
+
   return (
     <div>
       {/* {cuisine.map((item) => {
         return ( */}
 
           {cuisine.map((recipe) => {
-            return <Card key={uuidv4()} recipe={recipe}/>
+            return <Card theme={cuisineTheme} key={uuidv4()} recipe={recipe}/>
           })}
 
             {/* // <div key={uuidv4()}>

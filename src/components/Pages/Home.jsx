@@ -24,6 +24,35 @@ function Home({search}) {
     fetchData();
   }, []);
 
+  const homeTheme = {
+    main: {
+      display: "grid",
+      gridTemplateColumns: '2fr 1.5fr',
+      color: 'yellow'
+    },
+    inputText: {
+      padding: "10px",
+      color: "red",
+    },
+  };
+
+  // const homeTheme = {
+  //   home-recipe-display: {
+  //     display: grid,
+  //     grid-template-columns: 2fr 1.5fr,
+  //     grid-template-rows: auto,
+  //   }
+  // // .home-card{
+  // //     background-color: antiquewhite;
+  // //     border-radius: 6px;
+  // //     margin: 10px 20px;
+  // // }
+  // // .random-recipe-img{
+  // //     width: 10rem;
+  // // }
+  // };
+
+
   return (
     <div id='homeScreen'>
       <div className="home-message-container">
@@ -33,8 +62,7 @@ function Home({search}) {
 
         <div className="home-recipe-display">
           {randomRecipe.map((random) => {
-            //  <Link to={'/recipe/' + random.recipe.label} key={uuidv4()}>
-            return <div className='home-card'><Card search={search} recipe={random}/></div>
+            return <div key={uuidv4()} className='home-card'><Card theme={homeTheme} search={search} recipe={random}/></div>
           })}
         </div>
       </div>

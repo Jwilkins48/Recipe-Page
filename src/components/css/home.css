@@ -34,7 +34,7 @@
         width: 80%;
         height: 80%;
     }
-    .home-recipe-display{
+    /* .home-recipe-display{
         display: grid;
         grid-template-columns: 2fr 1.5fr;
         grid-template-rows: auto;
@@ -46,7 +46,7 @@
     }
     .random-recipe-img{
         width: 10rem;
-    }
+    } */
 
     /* CATEGORY SECTION */
     .category-container{
