@@ -42,7 +42,8 @@ function Home({search}) {
       margin: '20px 10px'
     },
     cardInfoContainer: {
-      justifyContent: 'center',
+      justifyContent: 'space-around',
+      height: '250px',
       cursor: 'default',
       margin: '0 15px',
       display: 'flex',
