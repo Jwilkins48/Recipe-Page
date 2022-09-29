@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Axios from "axios";
 import {v4 as uuidv4} from 'uuid'
+import Card from '../Card';
 
 function Cuisine() {
 
@@ -25,14 +26,19 @@ function Cuisine() {
 
   return (
     <div>
-      {cuisine.map((item) => {
-        return (
-            <div key={uuidv4()}>
-                <img src={item.recipe.image} alt='cuisine' />
-                <h3>{item.recipe.label}</h3>
-            </div>
-        ) 
-      })}
+      {/* {cuisine.map((item) => {
+        return ( */}
+
+          {cuisine.map((recipe) => {
+            return <Card key={uuidv4()} recipe={recipe}/>
+          })}
+
+            {/* // <div key={uuidv4()}>
+            //     <img src={item.recipe.image} alt='cuisine' />
+            //     <h3>{item.recipe.label}</h3>
+            // </div> */}
+        {/* ) 
+      })} */}
     </div>
   )
 }

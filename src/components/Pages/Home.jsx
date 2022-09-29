@@ -5,6 +5,7 @@ import {v4 as uuidv4} from 'uuid'
 import HomeCard from '../HomeCard';
 import Category from '../Category';
 import { Link, useParams, useLocation  } from 'react-router-dom'
+import Card from '../Card';
 
 
 function Home({search}) {
@@ -33,7 +34,7 @@ function Home({search}) {
         <div className="home-recipe-display">
           {randomRecipe.map((random) => {
             //  <Link to={'/recipe/' + random.recipe.label} key={uuidv4()}>
-            return <div className='home-card'><HomeCard search={search} random={random}/></div>
+            return <div className='home-card'><Card search={search} recipe={random}/></div>
           })}
         </div>
       </div>
