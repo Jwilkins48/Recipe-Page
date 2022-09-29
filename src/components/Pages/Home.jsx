@@ -26,7 +26,7 @@ function Home({search}) {
   const homeTheme = {
     main: {
       flexDirection: 'row',
-      height: '75%',
+      height: '80%',
       borderRadius: '5px',
       backgroundColor: '#ffe4ae',
       display: 'flex',
@@ -37,11 +37,19 @@ function Home({search}) {
     cardImage: {
       boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
       height: 'auto',
-      width: '16rem',
+      width: '13rem',
       borderRadius: '6px',
-      margin: '15px 10px'
-
+      margin: '20px 10px'
     },
+    cardInfoContainer: {
+      justifyContent: 'center',
+      cursor: 'default',
+      margin: '0 15px',
+      display: 'flex',
+      flexDirection: 'column', 
+      alignItems: 'flex-start',
+
+    }
   };
 
   // const homeTheme = {
@@ -70,7 +78,7 @@ function Home({search}) {
 
         <div className="home-recipe-display">
           {randomRecipe.map((random) => {
-            return <div key={uuidv4()} className='home-card'><Card theme={homeTheme} search={search} recipe={random}/></div>
+            return <Card key={uuidv4()} theme={homeTheme} search={search} recipe={random}/>
           })}
         </div>
       </div>

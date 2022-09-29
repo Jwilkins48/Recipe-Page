@@ -19,10 +19,10 @@ function Card({recipe, theme}) {
       </div>
 
       {/* NAME / MORE INFO */}
-      <div className='cardInfoContainer'>
+      <div style={theme.cardInfoContainer}>
 
         <div className='cardInfo'>
-          <h1>{recipe.recipe.label}</h1>
+          <h3>{recipe.recipe.label}</h3>
           <p className='recipeInfo'>{calories.toFixed()} cal</p>
           <p className='recipeInfo'>{recipe.recipe.mealType}</p>
           <p className='recipeInfo'>{recipe.recipe.yield} Servings</p>

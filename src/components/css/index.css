@@ -29,22 +29,21 @@ body {
 }
 
 .searchInput{
-  padding: 8px 12px;
+  padding: 9px 12px;
   width: 180px;
-  margin-right: 8px;
   border: 1px solid #ffffff;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .searchLink{
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #134418;
-  padding: 6px 9px;
+  padding: 6.6px 10px 9px 10px;
   border: 1px solid #1C6758;
   background-color: #f1cb7d;
-  border-radius: 4px;
+  border-radius: 0 5px 5px 0;
   text-decoration: none;
 }
 .searchLink:hover{
@@ -100,16 +99,10 @@ body {
 }
 .ingredientList{
   list-style-type: none;
-  font-size: 14px;
+  font-size: 10px;
 }
-/* .cardImages{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: auto;
-  width: 275px;
-  margin-top: 15px;
-  border-radius: 6px;
-} */
-.cardInfoContainer{
+
+/* .cardInfoContainer{
   cursor: default;
   display: flex;
   flex-direction: column;
@@ -117,7 +110,7 @@ body {
   width: 100%;
   justify-content: space-between;
   margin-left: 30px;
-}
+} */
 .fullRecipeBtn{
   z-index: 1;
   width: 9rem;

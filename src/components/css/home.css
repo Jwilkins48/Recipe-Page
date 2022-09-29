@@ -33,13 +33,12 @@
 @media(min-width: 1280px){
     .home-message-container{
         width: 70%;
-        height: 82%;
+        height: 80%;
         padding: 2rem 5rem;
     }
     .home-recipe-display{
         display: grid;
         grid-template-columns: 2fr 2fr;
-
         gap: 0 2rem;
     }
     .random-recipe-img{
@@ -50,25 +49,25 @@
     .category-container{
         display: flex;
         justify-content: center;
-        gap: 10rem;
+        gap: 7rem;
         align-items: center;
     }
 
     .cuisineType-container{
         border: 1px solid #267566;
-        padding: 15px;
+        padding: 12px;
         background-color: #555555;
         border-radius: 50%;
         text-align: center;
         text-decoration: none;
-        margin-top: 10px;
+        margin-top: 5px;
     }
     .italian{
         padding: 15px 20px;
     }
     .cuisine-title{
         color: aliceblue;
-        font-size: 12px;
+        font-size: 10px;
     }
     .category-icon{
         color: #267566;
