@@ -27,7 +27,7 @@ function Cuisine() {
     const cuisineTheme = {
       main: {
         backgroundColor: '#ffe4ae',
-        width: '80%',
+        width: '75%',
         margin: '15px auto',
         padding: '20px',
         display: 'flex'
@@ -40,6 +40,10 @@ function Cuisine() {
         display: 'flex',
         flexDirection: 'column', 
         alignItems: 'flex-start',
+      },
+      cardImage: {
+        boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+        borderRadius: '6px',
       },
     };
 

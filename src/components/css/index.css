@@ -130,24 +130,9 @@ body {
 
 /* TABLET SIZING */
 @media(min-width: 700px){
-  /* .cardContainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 18px;
-  }
-  .cardInfoContainer{
-    align-items: flex-start;
-    margin-left: 3.5rem;
-  }
   .navContainer{
     display: flex;
     justify-content: space-between;
-  }
-  .searchInput{
-    font-size: 20px;
-    width: 300px;
-    margin-left: 12px;
-    margin-right: 10px;
   }
   .recipeInfo{
     font-size: 18px;
@@ -156,8 +141,25 @@ body {
     font-size: 2.6rem;
     margin-right: 1.5rem;
   }
-  .submitSearchBtn{
-    font-size: 18px;
+  .searchInput{
+    font-size: 15px;
+    width: 16rem;
+    margin-left: 12px;
+  }
+  .searchLink{
+    padding: 9px 10px 9.8px 10px;
+  }
+  .fullRecipeBtn{
+    font-size: 16px;
+  }
+  /* .cardContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 18px;
+  }
+  .cardInfoContainer{
+    align-items: flex-start;
+    margin-left: 3.5rem;
   }
   .cardInfo{
     font-size: 20px;
@@ -172,18 +174,12 @@ body {
 
 /* DESKTOP SIZING */
 @media(min-width: 1280px){
-  /* .fullRecipeBtn{
-    margin-left: 15%;
-  }
+
+  /*
   .cardContainer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-  }
-  .searchInput{
-    font-size: 18px;
-    width: 300px;
-    margin-left: 35px;
   }
   .card{
     display: grid;
